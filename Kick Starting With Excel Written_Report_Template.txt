@@ -1,0 +1,55 @@
+# Kickstarting with Excel
+
+## Overview of Project
+Inspired by the success of the fundraising goal of her play Fever, Louise is interested in knowing the level of contribution other
+campaigns receive in relation to their launch data and funding goals. Hence, the purpose of the project is to analyze campaign outcomes
+in relation to launch dates and funding goals. This will be achieved through the use of visualizations, that includes graphs and charts.
+The first deliverable is outcomes based on launch date, while the second deliverable is outcome based on goals. 
+
+### Purpose
+The purpose of the project is to analyze campaign outcomes in relation to launch dates and funding goals. This will be achieved through
+the use of visualizations, that includes graphs and charts.The first deliverable is outcomes based on launch date, while the second 
+deliverable is outcome based on goals.
+
+## Analysis and Challenges
+The data in the month, day and year format was first obtained using this code: =(((I2/60)/60)/24)+DATE(1970,1,1). The year () function was
+used to get the year for the deadline date and launch date by using =YEAR(S2). The pivot table was then created with months as the row labels
+and the column labels were successful, failed and canceled. A line graph was then created to represent the data in the pivot table. 
+In Deliverable 2, for the Outcome Based on Goals Chart, the COUNTIFS() function was used to count the number of instances of successful, failed
+and canceled plays for the given goals ranges. An example of the COUNTIFS() function is: 
+=COUNTIFS(Sheet1!$F$522:Sheet1!$F$4115,"=successful",Sheet1!$D$522:Sheet1!$D$4115,"<=24999", Sheet1!$D$522:Sheet1!$D$4115,">=20000")
+
+### Analysis of Outcomes Based on Launch Date
+For the Theater Outcomes by launch date, each month showed there are consistently more successful than failed outcomes, and the failed outcomes are
+significantly higher than cancelled outcomes. The higher successful and failed outcomes occurred during the months from April to August, with a decrease
+in September and another spike in October, while the cancelled outcomes were consistently less than 10 with zero cancelled outcome in October.
+
+### Analysis of Outcomes Based on Goals
+For goals amount less than $1500, the percentage of successful is greater than the percentage of failed plays.From $20000 to $40000 the percentage of 
+failed is greater than the percentage of successful. Then there is a brieft period around $40000, where there are more successful plays that failed plays.
+The number of successful plays quickly decreased for more than $50000.
+
+### Challenges and Difficulties Encountered
+One significant was COUNTIFS() function.My graphs look slightly different than the model howevr, I have double checked my functions and there do not seem to 
+be any errors.
+
+## Results
+
+- What are two conclusions you can draw about the Outcomes based on Launch Date?
+For the Theater Outcomes by launch date, each month showed there are consistently more successful than failed outcomes, and the failed outcomes are
+significantly higher than cancelled outcomes. The higher successful and failed outcomes occurred during the months from April to August, with a decrease
+in September and another spike in October, while the cancelled outcomes were consistently less than 10 with zero cancelled outcome in October.
+
+- What can you conclude about the Outcomes based on Goals?
+For the Theater Outcomes by launch date, each month showed there are consistently more successful than failed outcomes, and the failed outcomes are
+significantly higher than cancelled outcomes. The higher successful and failed outcomes occurred during the months from April to August, with a 
+decrease in September and another spike in October, while the cancelled outcomes were consistently less than 10 with zero cancelled outcome in October.
+
+- What are some limitations of this dataset?
+Some limitations to the dataset are who is the production manager or the production company of the theater. A well-regarded production manager or 
+production company that have previously produced successful plays may find people are more willing to invest to future theater productions.
+
+- What are some other possible tables and/or graphs that we could create?
+Other possible tables and/or graphs we could create are graph the time-period between the deadline and the launch date for successful, failed and cancelled 
+productions to decipher if ample time was devoted to raising the necessary funds. A circle graph can also tell us what category and subcategory is successful, 
+failed or cancelled.
